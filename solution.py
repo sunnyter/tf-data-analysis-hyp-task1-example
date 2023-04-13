@@ -14,6 +14,6 @@ def solution(x_success: int,
     a=0.02
     count = np.array([x_success,y_success])
     nobs = np.array([x_cnt, y_cnt])
-    stat, pval = proportions_ztest(count, nobs)
+    stat, pval = proportions_ztest(count, nobs, alternative='smaller')
    
     return pval<a # Ваш ответ, True или False
